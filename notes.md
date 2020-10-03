@@ -1,5 +1,6 @@
-[] make inputs for employee first name, last name, id #, job title, annual salary
-[] make submit button
+[x] make inputs for employee first name, last name, id #, job title, annual salary
+    []make section look better later
+[x] make submit button
 [] give submit button functionality to collect info from input fields created above
 [] collect this info in js
 [] append this info to dom
