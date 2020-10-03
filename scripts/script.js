@@ -64,13 +64,16 @@ function appendToDom() {
         <th></th>
     </tr>`);
     for (let i = 0; i < employeeData.length; i++) {
+        let salaryNumber = employeeData[i].annualSalary;
+        let salaryString = salaryNumber.toLocaleString('en-US', {maximumFractionDigits:2});
+        
         $('#bestTableEver').append(`
         <tr>
             <td>${employeeData[i].firstName}</td>
             <td>${employeeData[i].lastName}</td>
             <td>${employeeData[i].idNumber}</td>
             <td>${employeeData[i].title}</td>
-            <td>${employeeData[i].annualSalary}</td>
+            <td>$${salaryString}</td>
             <td class="deleteColumn"><button class="deleteBtn">Delete</button></td>
         </tr>`);
     }
@@ -87,8 +90,15 @@ console.log('delete button clicked');
     let removeSalary = $(this).parent().prev().text();
     console.log('removeSalary', removeSalary);
     removeEntry(removeId, removeSalary);
-    $(this).parent().parent().remove();    
-    $('#monthlyTotal').text(`Monthly Salary Total: $${monthlyTotalString}`);
+    if ($('table tr').length == 2) {
+        $('#monthlyTotal').empty();
+        $('#output').empty();
+        $('#sectionHeading').text(`Employee Data Will Be Displayed Here Once Entered`);
+    }
+    else {
+        $(this).parent().parent().remove();    
+        $('#monthlyTotal').text(`Monthly Salary Total: $${monthlyTotalString}`);
+    }
     checkColor();
 }
 

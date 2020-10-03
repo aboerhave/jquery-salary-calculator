@@ -11,7 +11,7 @@
 [x] add red background is total monthly cost exceeds 20k
 [x] make delete btn
 [x] give delete button functionality to remove an employee from the DOM
-[] want to add comma to numbers and dollar sign ?
+[x] want to add comma to numbers and dollar sign ?
 [] need to add comments
 
 ----------------------------------------------------------------------------------
@@ -21,3 +21,5 @@ Stretch Goals
 [x] add more style (?)
     [x] want to shade every other row of table
     [x] want to align boxes for input
+[] want to add ability to check if inputs are all filled in
+[] want to add ability to check if id# exists already
