@@ -29,4 +29,36 @@ function submitBtnFunction() {
     console.log(newEmployee);
     employeeData.push(newEmployee);
     
+    $('#fName').val('');
+    $('#lName').val('');
+    $('#number').val('');
+    $('#title').val('');
+    $('#salary').val('');
+
+
+    appendToDom();
+}
+
+function appendToDom() {
+    $('#output').empty();
+    $('#output').append(`<table id="bestTableEver">
+    
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Annual Salary</th>
+    </tr>`);
+    for (let i = 0; i < employeeData.length; i++) {
+        $('#bestTableEver').append(`
+        <tr>
+            <td>${employeeData[i].firstName}</td>
+            <td>${employeeData[i].lastName}</td>
+            <td>${employeeData[i].idNumber}</td>
+            <td>${employeeData[i].title}</td>
+            <td>${employeeData[i].annualSalary}</td>
+        </tr>`);
+    }
+
 }

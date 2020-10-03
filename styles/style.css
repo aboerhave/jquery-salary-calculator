@@ -6,8 +6,23 @@ h1 {
     padding-top: 30px;
     margin-top: 0;
     padding-bottom: 30px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+main {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 input {
     width: 150px;
+}
+
+table {
+    width:100%;
+}
+
+table, th, td, tr {
+    border: 1px solid black;
 }
