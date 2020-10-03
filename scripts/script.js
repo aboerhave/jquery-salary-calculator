@@ -44,8 +44,9 @@ function submitBtnFunction() {
     appendToDom();
     // append monthly value to dom
     yearlyTotal += newEmployee.annualSalary;
-    $('#monthlyTotal').text(`Monthly Salary Total: $${yearlyTotal/12}`);
-    
+    monthlyTotal = yearlyTotal /12;
+    $('#monthlyTotal').text(`Monthly Salary Total: $${monthlyTotal}`);
+    checkColor();
 }
 
 function appendToDom() {
@@ -78,3 +79,38 @@ function deleteBtnFunction() {
  console.log('delete button clicked');
     $(this).parent().parent().remove();
 }
+
+// may have been thinking about this wrong.  I think it's more than needed for regular,
+// but should chanbe properly if I get the remove to work
+function checkColor() {
+    // the output line with monthly total is id=monthlyTotal
+    console.log($('#monthlyTotal').hasClass("highMonthlySalary")); 
+    // new monthly total lower than 20k and previous assignment was to low class
+    
+    if (monthlyTotal <= 20000 && $('#monthlyTotal').hasClass("lowMonthlySalary")) {
+        // leave same
+        console.log('case 1');
+        
+    }
+    // new monthly total <= 20k and previous assignment was to high class
+    else if (monthlyTotal <= 20000 && $('#monthlyTotal').hasClass("highMonthlySalary")) {
+        // change class to low
+        console.log('case 2');
+        $('#monthlyTotal').removeClass("highMonthlySalary");
+        $('#monthlyTotal').addClass("lowMonthlySalary");
+    }
+    // new monthly total > 20k and previous assignment was to low class
+    else if (monthlyTotal > 20000 && $('#monthlyTotal').hasClass("lowMonthlySalary")) {
+        console.log('case 3');
+        $('#monthlyTotal').removeClass("lowMonthlySalary");
+        $('#monthlyTotal').addClass("highMonthlySalary");
+    }
+    // new monthly total > 20k and previous assignment was to high class
+    else if (monthlyTotal > 20000 && $('#monthlyTotal').hasClass("highMonthlySalary")){
+        // leave same
+        console.log('case 4');
+        
+    }
+    
+
+}   // end checkColor fn

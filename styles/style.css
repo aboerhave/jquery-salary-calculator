@@ -20,7 +20,7 @@ input {
 }
 
 table {
-    width:100%;
+    width: 100%;
 }
 
 table, th, td, tr {
@@ -33,4 +33,13 @@ table, th, td, tr {
 
 #monthlyTotal{
     float: right;
+    padding: 5px;
+}
+
+.lowMonthlySalary {
+    background-color: white;
+}
+.highMonthlySalary {
+    background-color: orangered;
+    color: white;
 }
