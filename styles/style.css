@@ -26,3 +26,7 @@ table {
 table, th, td, tr {
     border: 1px solid black;
 }
+
+.deleteColumn {
+    text-align: center;
+}

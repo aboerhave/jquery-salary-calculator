@@ -49,6 +49,7 @@ function appendToDom() {
         <th>ID</th>
         <th>Title</th>
         <th>Annual Salary</th>
+        <th></th>
     </tr>`);
     for (let i = 0; i < employeeData.length; i++) {
         $('#bestTableEver').append(`
@@ -58,6 +59,7 @@ function appendToDom() {
             <td>${employeeData[i].idNumber}</td>
             <td>${employeeData[i].title}</td>
             <td>${employeeData[i].annualSalary}</td>
+            <td class="deleteColumn"><button class="deleteBtn">Delete</button></td>
         </tr>`);
     }
 
