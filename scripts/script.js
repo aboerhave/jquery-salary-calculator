@@ -5,6 +5,8 @@ $(document).ready(onReady);
 
 function onReady() {
     $('#submitBtn').on('click', submitBtnFunction);
+    // adds event listener to buttons in deleteBtn class once they exist
+    $('#output').on('click', ".deleteBtn", deleteBtnFunction);
 }
 
 function submitBtnFunction() {
@@ -63,4 +65,9 @@ function appendToDom() {
         </tr>`);
     }
 
+}
+
+function deleteBtnFunction() {
+ console.log('delete button clicked');
+    
 }

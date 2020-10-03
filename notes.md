@@ -4,8 +4,9 @@
 [x] give submit button functionality to collect info from input fields created above
 [x] collect this info in js
 [x] append this info to dom
-[] Need to put delete button inside each row of table
-[]  Need to put monthly total on DOM
+[x] Need to put delete button inside each row of table
+[] delete button needs function
+[] Need to put monthly total on DOM
 [] add red background is total monthly cost exceeds 20k
 [] make delete btn
 [] give delete button functionality to remove an employee from the DOM
