@@ -1,5 +1,7 @@
 // Main script file for jQuery Salary Calculator assignment
 let employeeData = [];
+let yearlyTotal = 0;
+let monthlyTotal = 0;
 
 $(document).ready(onReady);
 
@@ -7,6 +9,7 @@ function onReady() {
     $('#submitBtn').on('click', submitBtnFunction);
     // adds event listener to buttons in deleteBtn class once they exist
     $('#output').on('click', ".deleteBtn", deleteBtnFunction);
+    //$('#monthlyTotal').hide();
 }
 
 function submitBtnFunction() {
@@ -39,6 +42,10 @@ function submitBtnFunction() {
 
 
     appendToDom();
+    // append monthly value to dom
+    yearlyTotal += newEmployee.annualSalary;
+    $('#monthlyTotal').text(`Monthly Salary Total: $${yearlyTotal/12}`);
+    
 }
 
 function appendToDom() {
@@ -64,10 +71,10 @@ function appendToDom() {
             <td class="deleteColumn"><button class="deleteBtn">Delete</button></td>
         </tr>`);
     }
-
+    
 }
 
 function deleteBtnFunction() {
  console.log('delete button clicked');
-    
+    $(this).parent().parent().remove();
 }

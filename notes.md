@@ -5,7 +5,8 @@
 [x] collect this info in js
 [x] append this info to dom
 [x] Need to put delete button inside each row of table
-[] delete button needs function
+[x] delete button needs function
+    - removes row from DOM - may do stretch portion removing from total later
 [] Need to put monthly total on DOM
 [] add red background is total monthly cost exceeds 20k
 [] make delete btn
