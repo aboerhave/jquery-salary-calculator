@@ -76,8 +76,27 @@ function appendToDom() {
 }
 
 function deleteBtnFunction() {
- console.log('delete button clicked');
-    $(this).parent().parent().remove();
+console.log('delete button clicked');
+    // Need to put ability to remove data from javascript here
+    //$(this).css("background-color", "green");
+    $(this).parent().prev().css("background-color", "red");
+    let removeId = $(this).parent().prev().prev().prev().text();
+    console.log('removeId', removeId);
+    let removeSalary = $(this).parent().prev().text();
+    console.log('removeSalary', removeSalary);
+    removeEntry(removeId, removeSalary);
+    $(this).parent().parent().remove();    
+    $('#monthlyTotal').text(`Monthly Salary Total: $${monthlyTotal}`);
+    checkColor();
+}
+
+function removeEntry(removeId, removeSalary) {
+    yearlyTotal -= removeSalary;
+    monthlyTotal = yearlyTotal / 12;
+    console.log('yearlyTotal', yearlyTotal);
+    console.log('montylyTotal', monthlyTotal);
+    
+    
 }
 
 // may have been thinking about this wrong.  I think it's more than needed for regular,
@@ -114,3 +133,27 @@ function checkColor() {
     
 
 }   // end checkColor fn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* extra
+can use data function
+$.data("#myDiv").get(0),"key", "arbitrary value";
+
+data method:
+let myObj = {};
+$(myObj).data("city","Springfield");*/
