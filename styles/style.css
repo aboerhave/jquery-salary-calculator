@@ -1,0 +1,9 @@
+/* main style sheet for jQuery Salary Calculator assignment */
+
+h1 {
+    text-align: center;
+    background-color: cadetblue;
+    padding-top: 30px;
+    margin-top: 0;
+    padding-bottom: 30px;
+}
