@@ -8,11 +8,27 @@ h1 {
     padding-bottom: 30px;
     margin-left: 0;
     margin-right: 0;
+    color: white;
 }
 
 main {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+#inputSection input {
+    margin-left: 115px;
+
+}
+
+#inputSection label {
+    position: absolute;
+}
+
+#submitBtn {
+    background-color: cadetblue;
+    color: white;
+    padding: 2px 7px;
 }
 
 input {
@@ -31,6 +47,12 @@ table, th, td, tr {
     text-align: center;
 }
 
+.deleteBtn {
+    background-color: cadetblue;
+    color: white;
+    padding: 2px 7px;
+}
+
 #monthlyTotal{
     float: right;
     padding: 5px;
@@ -44,3 +66,11 @@ table, th, td, tr {
     color: white;
 }
 
+th {
+    background-color: #9fc4c6;
+}
+
+tr:nth-child(odd) {
+    background-color:#dfebec;
+    ;
+}

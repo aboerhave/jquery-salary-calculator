@@ -11,13 +11,13 @@
 [x] add red background is total monthly cost exceeds 20k
 [x] make delete btn
 [x] give delete button functionality to remove an employee from the DOM
-[] want to add comma to numbers and dollar sign
+[] want to add comma to numbers and dollar sign ?
 [] need to add comments
 
 ----------------------------------------------------------------------------------
 Stretch Goals
 [x] once employee removed adjust total monthly value
 [x] remove entry from the employee array
-[] add more style (?)
-    [] want to shade every other row of table
-    [] want to alight boxes for input
+[x] add more style (?)
+    [x] want to shade every other row of table
+    [x] want to align boxes for input

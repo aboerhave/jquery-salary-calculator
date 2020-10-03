@@ -2,6 +2,7 @@
 let employeeData = [];
 let yearlyTotal = 0;
 let monthlyTotal = 0;
+let monthlytotal;
 
 $(document).ready(onReady);
 
@@ -45,7 +46,8 @@ function submitBtnFunction() {
     // append monthly value to dom
     yearlyTotal += newEmployee.annualSalary;
     monthlyTotal = yearlyTotal /12;
-    $('#monthlyTotal').text(`Monthly Salary Total: $${monthlyTotal}`);
+    monthlyTotalString = monthlyTotal.toLocaleString('en-US', {maximumFractionDigits:2});
+    $('#monthlyTotal').text(`Monthly Salary Total: $${monthlyTotalString}`);
     checkColor();
 }
 
@@ -86,13 +88,14 @@ console.log('delete button clicked');
     console.log('removeSalary', removeSalary);
     removeEntry(removeId, removeSalary);
     $(this).parent().parent().remove();    
-    $('#monthlyTotal').text(`Monthly Salary Total: $${monthlyTotal}`);
+    $('#monthlyTotal').text(`Monthly Salary Total: $${monthlyTotalString}`);
     checkColor();
 }
 
 function removeEntry(removeId, removeSalary) {
     yearlyTotal -= removeSalary;
     monthlyTotal = yearlyTotal / 12;
+    monthlyTotalString = monthlyTotal.toLocaleString('en-US', {maximumFractionDigits:2});
     console.log('yearlyTotal', yearlyTotal);
     console.log('montylyTotal', monthlyTotal);
     for (let i = 0; i < employeeData.length; i++) {
