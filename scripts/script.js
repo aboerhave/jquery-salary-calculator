@@ -95,7 +95,12 @@ function removeEntry(removeId, removeSalary) {
     monthlyTotal = yearlyTotal / 12;
     console.log('yearlyTotal', yearlyTotal);
     console.log('montylyTotal', monthlyTotal);
-    
+    for (let i = 0; i < employeeData.length; i++) {
+        // find index of entry to remove
+        if (removeId == employeeData[i].idNumber) {
+            employeeData.splice(i, 1);
+        }
+    }
     
 }
 
