@@ -14,6 +14,29 @@ One other challenge I had was removing the row of the table when delete is click
 
 ![Screen Shot](screen-shot.png)
 
-Your project description goes here. What problem did you solve? How did you solve it?
+### Prerequisites
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+- all software is included in the repository here.  I have put a copy of jQuery in the repository
+- The project requires an understanding of HTML, CSS, JavaScript and jQuery
+
+## Installation
+
+The project should not require any special installation.  The index.html file may be opened in a text editor and brought up by clicking the right button of the mouse and opening in a favorite or default browser.  
+
+## Usage
+
+1. Data for an employee may be entered in the boxes on the left of the screen, and then submitted by clicking the submit button.
+2. To add an employee, all of the input boxes must be filled in or an errer will be created.
+3. Once added, an employee may be deleted from the data by clicking the delete button at the end of the row with their information.
+4. Each additional employee that is added must have a new ID number.  It will not allow the addition of multiple entries with the same ID number.
+5.  Additional employees may be added or deleted as necessary.
+
+## Built With
+
+- HTML
+- CSS 
+- JavaScript
+- jQuery
+
+## Acknowledgment
+Thanks to Casey for jQuery instruction!
