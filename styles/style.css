@@ -1,5 +1,7 @@
-/* main style sheet for jQuery Salary Calculator assignment */
+/* Main stylesheet for jQuery Salary Calculator assignment - week 7 of Primce Digital Academy
+Adam Boerhave 10/2/2020 - 10/4/2020 */
 
+/* color and position for h1 */
 h1 {
     text-align: center;
     background-color: cadetblue;
@@ -11,77 +13,85 @@ h1 {
     color: white;
 }
 
+/* outer margin of page */
 main {
     margin-left: 10px;
     margin-right: 10px;
 }
 
+/* moves input boxes over and flush */
 #inputSection input {
     margin-left: 115px;
-
 }
 
+/* position for input labels so boxes go over past them */
 #inputSection label {
     position: absolute;
 }
 
-#submitBtn {
+/* color and spacing for buttons */
+button {
     background-color: cadetblue;
     color: white;
     padding: 2px 7px;
 }
 
+/* moves button when clicked */
 button:active {
     position: relative;
     left: 3px;
     top: 3px;
 }
 
+/* size of input box */
 input {
     width: 150px;
 }
 
+/* table size */
 table {
     width: 100%;
 }
 
+/* borders for table */
 table, th, td, tr {
     border: 1px solid black;
 }
 
+/* moves button to center of column */
 .deleteColumn {
     text-align: center;
 }
 
-.deleteBtn {
-    background-color: cadetblue;
-    color: white;
-    padding: 2px 7px;
-}
-
+/* color and size of last row of table */
 #lastRow {
     height: 25px;
     background-color: #9fc4c6;
 }
 
-
+/* moves monthly salary line to right of page */
 #monthlyTotal{
     float: right;
     padding: 5px;
 }
 
+/* removes bg color if total <= 20k */
 .lowMonthlySalary {
     background-color: white;
 }
+
+/* red bg color if total > 20k */
 .highMonthlySalary {
     background-color: orangered;
     color: white;
 }
 
+/* bg color for first row of table */
 th {
     background-color: #9fc4c6;
 }
 
+/* bg color of every other row of table */
 tr:nth-child(odd) {
     background-color:#dfebec;
 }
