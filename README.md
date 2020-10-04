@@ -12,7 +12,7 @@ One other challenge I had was removing the row of the table when delete is click
 
 ## Screen Shot
 
-![Screen Shot](Screen Shot 2020-10-04 at 5.40.34 PM)
+![Screen Shot](screen-shot.png)
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
