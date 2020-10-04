@@ -11,7 +11,7 @@ One of the challenges of the project came trying to highlight the section of the
 One other challenge I had was removing the row of the table when delete is clicked.  I used colors on the screen from inside my JavaScript file to change certain elements which were at different levels of the DOM tree to help understand the path I needed to create to remove or select an item.  I was trying to select a different data cell of the table and watched a few videos to learn more about DOM traversal and found one that mentioned .prev() to select a previous sibling of an element on the DOM tree, and this was very helpful.
 
 
-
+(Screen Shot 2020-10-04 at 5.40.34 PM)
 
 Your project description goes here. What problem did you solve? How did you solve it?
 
