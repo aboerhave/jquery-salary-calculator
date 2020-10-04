@@ -17,39 +17,63 @@ function submitBtnFunction() {
     console.log('submit button clicked');
     
     $('#sectionHeading').text('Employee Information:')
-    // Collect data from input boxes here 
-    firstNameData = $('#fName').val();
-    lastNameData = $('#lName').val();
-    numberData = Number($('#number').val());
-    titleData = $('#title').val();
-    salaryData = Number($('#salary').val());
+   
+    if(checkAllFields()) {
 
-    // create object with data collected
-    let newEmployee = {
-        firstName: firstNameData,
-        lastName: lastNameData,
-        idNumber: numberData,
-        title: titleData,
-        annualSalary: salaryData
-    }
-    console.log(newEmployee);
-    employeeData.push(newEmployee);
+        // Collect data from input boxes here 
+        firstNameData = $('#fName').val();
+        lastNameData = $('#lName').val();
+        numberData = Number($('#number').val());
+        titleData = $('#title').val();
+        salaryData = Number($('#salary').val());
+
+   
+
+        // create object with data collected
+        let newEmployee = {
+            firstName: firstNameData,
+            lastName: lastNameData,
+            idNumber: numberData,
+            title: titleData,
+            annualSalary: salaryData
+        }
+        console.log(newEmployee);
+        employeeData.push(newEmployee);
     
-    $('#fName').val('');
-    $('#lName').val('');
-    $('#number').val('');
-    $('#title').val('');
-    $('#salary').val('');
+        $('#fName').val('');
+        $('#lName').val('');
+        $('#number').val('');
+        $('#title').val('');
+        $('#salary').val('');
 
 
-    appendToDom();
-    // append monthly value to dom
-    yearlyTotal += newEmployee.annualSalary;
-    monthlyTotal = yearlyTotal /12;
-    monthlyTotalString = monthlyTotal.toLocaleString('en-US', {maximumFractionDigits:2});
-    $('#monthlyTotal').text(`Monthly Salary Total: $${monthlyTotalString}`);
-    checkColor();
-}
+        appendToDom();
+        // append monthly value to dom
+        yearlyTotal += newEmployee.annualSalary;
+        monthlyTotal = yearlyTotal /12;
+        monthlyTotalString = monthlyTotal.toLocaleString('en-US', {maximumFractionDigits:2});
+        $('#monthlyTotal').text(`Monthly Salary Total: $${monthlyTotalString}`);
+        checkColor();
+    }
+    else {
+        alert('Please fill in all of the input boxes')
+    }   
+} // end submitBtn fn
+
+function checkAllFields() {
+
+    if($('#fName').val() && $('#lName').val() && $('#number').val() && 
+    $('#title').val() && $('#salary').val()) {
+        console.log('all fields true');
+        
+        return true;
+    }
+    else { 
+        console.log('all fields false');
+        
+        return false;
+    }
+}   // end checkAllFields fn
 
 function appendToDom() {
     $('#output').empty();
