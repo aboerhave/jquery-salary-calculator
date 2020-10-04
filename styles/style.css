@@ -59,6 +59,10 @@ table, th, td, tr {
     padding: 2px 7px;
 }
 
+#lastRow {
+    height: 25px;
+    background-color: #9fc4c6;
+}
 
 
 #monthlyTotal{

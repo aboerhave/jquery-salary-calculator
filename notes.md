@@ -14,6 +14,7 @@
 [x] want to add comma to numbers and dollar sign ?
 [] need to add comments
 [] make readme
+[] add botton of table
 
 ----------------------------------------------------------------------------------
 Stretch Goals
