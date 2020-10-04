@@ -12,9 +12,9 @@
 [x] make delete btn
 [x] give delete button functionality to remove an employee from the DOM
 [x] want to add comma to numbers and dollar sign ?
-[] need to add comments
+[x] need to add comments
 [] make readme
-[] add botton of table
+[x] add botton of table
 
 ----------------------------------------------------------------------------------
 Stretch Goals
