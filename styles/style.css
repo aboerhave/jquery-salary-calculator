@@ -31,6 +31,12 @@ main {
     padding: 2px 7px;
 }
 
+button:active {
+    position: relative;
+    left: 3px;
+    top: 3px;
+}
+
 input {
     width: 150px;
 }
@@ -52,6 +58,8 @@ table, th, td, tr {
     color: white;
     padding: 2px 7px;
 }
+
+
 
 #monthlyTotal{
     float: right;

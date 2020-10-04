@@ -22,5 +22,5 @@ Stretch Goals
 [x] add more style (?)
     [x] want to shade every other row of table
     [x] want to align boxes for input
-[] want to add ability to check if inputs are all filled in
-[] want to add ability to check if id# exists already
+[x] want to add ability to check if inputs are all filled in
+[x] want to add ability to check if id# exists already

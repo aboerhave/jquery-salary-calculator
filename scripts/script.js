@@ -18,7 +18,7 @@ function submitBtnFunction() {
     
     $('#sectionHeading').text('Employee Information:')
    
-    if(checkAllFields()) {
+    if (checkAllFields()) {
 
         // Collect data from input boxes here 
         firstNameData = $('#fName').val();
@@ -27,34 +27,40 @@ function submitBtnFunction() {
         titleData = $('#title').val();
         salaryData = Number($('#salary').val());
 
-   
+        // want to make if line to check if id exists yet here 
+        // checkId(numberData);
+        if (checkId(numberData)) {
 
-        // create object with data collected
-        let newEmployee = {
-            firstName: firstNameData,
-            lastName: lastNameData,
-            idNumber: numberData,
-            title: titleData,
-            annualSalary: salaryData
-        }
-        console.log(newEmployee);
-        employeeData.push(newEmployee);
+            // create object with data collected
+            let newEmployee = {
+                firstName: firstNameData,
+                lastName: lastNameData,
+                idNumber: numberData,
+                title: titleData,
+                annualSalary: salaryData
+            }
+            console.log(newEmployee);
+            employeeData.push(newEmployee);
     
-        $('#fName').val('');
-        $('#lName').val('');
-        $('#number').val('');
-        $('#title').val('');
-        $('#salary').val('');
+            $('#fName').val('');
+            $('#lName').val('');
+            $('#number').val('');
+            $('#title').val('');
+            $('#salary').val('');
 
 
-        appendToDom();
-        // append monthly value to dom
-        yearlyTotal += newEmployee.annualSalary;
-        monthlyTotal = yearlyTotal /12;
-        monthlyTotalString = monthlyTotal.toLocaleString('en-US', {maximumFractionDigits:2});
-        $('#monthlyTotal').text(`Monthly Salary Total: $${monthlyTotalString}`);
-        checkColor();
-    }
+            appendToDom();
+            // append monthly value to dom
+            yearlyTotal += newEmployee.annualSalary;
+            monthlyTotal = yearlyTotal /12;
+            monthlyTotalString = monthlyTotal.toLocaleString('en-US', {maximumFractionDigits:2});
+            $('#monthlyTotal').text(`Monthly Salary Total: $${monthlyTotalString}`);
+            checkColor();
+        }
+        else {
+            alert('That ID Number already exists.  Please try another entry');
+        }
+    }   
     else {
         alert('Please fill in all of the input boxes')
     }   
@@ -74,6 +80,15 @@ function checkAllFields() {
         return false;
     }
 }   // end checkAllFields fn
+
+function checkId(identification) {
+    for (let i = 0; i < employeeData.length; i++) {
+        if(identification == employeeData[i].idNumber) {
+            return false;
+        }
+    }
+    return true;
+}   // end checkId fn
 
 function appendToDom() {
     $('#output').empty();
