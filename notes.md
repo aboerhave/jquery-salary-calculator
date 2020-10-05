@@ -13,7 +13,7 @@
 [x] give delete button functionality to remove an employee from the DOM
 [x] want to add comma to numbers and dollar sign ?
 [x] need to add comments
-[] make readme
+[x] make readme
 [x] add botton of table
 
 ----------------------------------------------------------------------------------
