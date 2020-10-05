@@ -39,4 +39,4 @@ The project should not require any special installation.  The index.html file ma
 - jQuery
 
 ## Acknowledgment
-Thanks to Casey for jQuery instruction!
+Thanks to Casie for jQuery instruction!
