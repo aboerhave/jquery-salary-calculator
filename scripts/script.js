@@ -1,4 +1,4 @@
-// Main script file for jQuery Salary Calculator assignment - week 7 of Primce Digital Academy
+// Main script file for jQuery Salary Calculator assignment - week 7 of Prime Digital Academy
 // Adam Boerhave 10/2/2020 - 10/4/2020
 
 let employeeData = [];  // empty array to store employee information
